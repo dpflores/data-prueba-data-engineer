@@ -1,0 +1,13 @@
+services:
+  python:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    restart: no
+    volumes:
+      - .:/app
+
+networks:
+  default:
+    external: true
+    name: pragma_net
